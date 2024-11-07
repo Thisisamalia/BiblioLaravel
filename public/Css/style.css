@@ -1,0 +1,323 @@
+
+        body, html {
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #608BC1;
+            padding: 10px 20px;
+            width: 100%;
+            top: 0;
+            left: 0;
+            box-sizing: border-box;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0 auto;
+            padding-right:10px;
+            gap: 20px;
+            
+        }
+        nav ul li {
+            margin-right: 20px;
+            
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            font-family: "Quicksand", sans-serif;
+            
+        }
+        .search-bar {
+            display: flex;
+            gap:5px;
+            
+            
+        }
+        .search-bar input {
+            padding: 5px;
+            border-radius:10px;
+            height: 20px;
+            border: 2px solid black;
+            
+        }
+        .search-bar button {
+            padding: 5px;
+            background-color: black;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius:10px;
+            border: 2px solid whitesmoke;
+        }
+   
+
+        footer {
+            background-color: #608BC1; 
+            padding: 10px 20px;
+            color: white; 
+            text-align: center;
+            position:fixed;
+            bottom: 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        h1{
+            
+            text-transform: uppercase;
+            font-family: "Quicksand", sans-serif;
+            -webkit-text-fill-color: black;
+            -webkit-text-stroke: 1px pink;
+        }
+
+
+        /* CSS container des livres */
+
+        .booklist {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 10px; 
+            max-width: 700px; 
+            margin: 0 ; 
+            margin-bottom:100px;
+        }
+        
+        .container {
+            flex: 1 1 300px;
+            max-width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow:  0px 1px 12px 10px rgba(0,0,0,0.15); /*https://www.cssmatic.com/box-shadow*/
+            overflow: hidden;
+            background-color: #fff;
+            margin: 10px;
+            text-align: center;
+        }
+        .book-card img {
+            width: 100%;
+            height: auto;
+            border-bottom: 1px solid #ddd;
+        }
+        .book-card h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+        }
+        .book-card p {
+            padding: 0 10px;
+            margin: 5px 0;
+        }
+        .book-card p strong {
+            display: block;
+            margin-bottom: 3px;
+        } 
+
+        #add-book{
+            font-weight: bold;
+            float: right;
+            margin: 20px;
+            background-color: #CC2B52;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 50px; /* le boutton touchait le bas */
+
+        }
+
+
+
+        /* Formulaire ajout de livre (addbook) */
+        
+        .form-container {
+            max-width: 600px;
+            margin: 50px auto; 
+            padding: 30px; 
+            background-color: white; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+            font-family: 'Quicksand', sans-serif; 
+    
+        }
+        
+        .form-container h2 {
+            text-align: center; 
+            color: #87A2FF; 
+            margin-bottom: 20px; 
+            font-weight: bold;
+            font-size: 30px;
+        }
+        
+        .form-container label {
+            display: block; 
+            margin-bottom: 8px; 
+            color: #555; 
+            font-weight: 500; 
+        }
+        
+        .form-container input,
+        .form-container textarea,
+        .form-container button {
+            width: 100%; 
+            padding: 10px; 
+            margin-bottom: 15px; 
+            border: 1px solid black;
+            border-radius: 10px; 
+            box-sizing: border-box; 
+            font-size: 16px; 
+        }
+        
+        .form-container input:focus,
+        .form-container textarea:focus {
+            border-color: #007BFF; 
+            box-shadow: -8px 4px 75px -15px rgba(0,123,255,0.35);
+        }
+        
+        .form-container button {
+            background-color: #7ED4AD; 
+            color: whitesmoke; 
+            cursor: pointer; 
+            font-weight: bold; 
+          
+        }
+        
+        .form-container button:hover {
+            background-color: #00FF9C; 
+            color:whitesmoke;
+            font-weight: bold;
+        }
+        
+        #motify-book {
+            font-weight: bold;
+            float: right;
+            margin: 20px;
+            background-color: #CC2B52;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 50px; /* le boutton touchait le bas */
+        }
+        
+        #back-homepage{
+            float:right;
+            font-weight: bold;
+            margin: 20px;
+            background-color: #CC2B52;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 50px; /* le boutton touchait le bas */
+        }
+
+
+
+
+
+    /* Formulaire de contact */
+    .contact-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .contact-form {
+        max-width: 600px;
+        margin: 50px auto; 
+        padding: 30px; 
+        background-color: white; 
+        border-radius: 12px; 
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+        font-family: 'Quicksand', sans-serif; 
+    }
+    
+
+    
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    .contact-form .btn-submit {
+        background-color: #CC2B52;
+        color: #fff;
+        padding: 10px 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin: 0 auto;
+        display:block; /* ca ne voulait pas etre au centre */
+    }
+    
+    .contact-form .btn-submit:hover {
+        background-color: #00FF9C
+    }
+    
+    .biblio-info {
+        text-align:center;
+        margin-top: 30px;
+        border-top: 1px solid #ccc;
+        padding-top: 20px;
+    }
+    
+
+
+
+    /* Messages via contactez-nous */
+    #msg{
+        text-align: center;
+        font-size: 30px;
+        color:red;
+    }
+
+    .message-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 10px;
+        
+    }
+    
+    .message-card {
+        border: 1px solid #ddd;
+        padding: 15px;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .message-card p {
+        margin: 5px 0;
+        font-size: 15px;
+        color:black;
+       
+    }
+    
+    /* bouton pour nouveaute */
+    #new-book{
+        font-weight: bold;
+        float: right;
+        margin: 20px;
+        background-color: #CC2B52;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-bottom: 50px; /* le boutton touchait le bas */
+
+    }
