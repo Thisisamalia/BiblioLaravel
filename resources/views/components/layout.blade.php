@@ -16,7 +16,7 @@
     @include('header')
 
     <main>
-        @yield('content')
+        @yield('content') 
     </main>
 
     <!-- partie repetitive du view footer -->

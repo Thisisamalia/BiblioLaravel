@@ -32,7 +32,7 @@
     @endforeach
 </div>
 
-<!-- Placez le bouton en dehors de la grille -->
+
 <div style="text-align: center; margin-top: 20px;">
     <button type="button" id="back-homepage" onclick="window.location.href='/homepage'">Retour page d'accueil</button>
 </div>

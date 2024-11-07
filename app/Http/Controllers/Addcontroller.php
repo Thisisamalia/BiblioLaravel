@@ -35,6 +35,7 @@ class Addcontroller extends Controller
         $filePath = base_path('resources/data/books.json');
         $currentData = [];
 
+        // si la direction de mon chemon existe, ca va lire mon fichier JSON et ca va retourner mon array, le true beut dire que si le fichier nest pas valide ca va retourner un tableau vide
         if (file_exists($filePath)) {
             $currentData = json_decode(file_get_contents($filePath), true) ?? [];
         }
@@ -48,6 +49,6 @@ class Addcontroller extends Controller
         file_put_contents($filePath, json_encode($currentData, JSON_PRETTY_PRINT));
 
         // Redirection vers la page 'homepage'
-        return redirect('/homepage')->with('success', 'Livre ajouté avec succès !');
+        return redirect('/homepage')->with('success', 'Livre ajouté!');
     }
 }

@@ -27,7 +27,7 @@
                     {{ $book['date_creation'] ? \Carbon\Carbon::parse($book['date_creation'])->format('d/m/Y') : '' }} <!-- garder vide car cest nous qui lavon implemente-->
                 </p>
                 <p><strong>Date de modification:</strong> 
-                    {{ $book['date_modification'] ? \Carbon\Carbon::parse($book['date_modification'])->format('d/m/Y') : '' }}
+                    {{ $book['date_modification'] ? \Carbon\Carbon::parse($book['date_modification'])->format('d/m/Y') : '' }}<!-- https://stackoverflow.com/questions/33825869/date-format-differences-between-d-m-y-and-d-m-y-->
                 </p>
             </div>
         </div>

@@ -34,7 +34,7 @@ class ContactController extends Controller
         file_put_contents($filePath, json_encode($currentData, JSON_PRETTY_PRINT));
 
         // Rediriger vers la page des messages avec un message de succès
-        return redirect('/message')->with('success', 'Votre message a été envoyé avec succès.');
+        return redirect('/message')->with('success', 'Merci pour votre message.');
     }
 
     public function showMessages()
@@ -43,10 +43,10 @@ class ContactController extends Controller
         $filePath = base_path('resources/data/message.json');
 
         // Lire les messages existants
-        $messages = [];
-        if (file_exists($filePath)) {
-            $messages = json_decode(file_get_contents($filePath), true) ?? [];
-        }
+        $messages = []; // initialiser le array message comme vide
+        if (file_exists($filePath)) { // verification du chemin du message.json
+            $messages = json_decode(file_get_contents($filePath), true) ?? []; // si le fichier est invalide celui va donner le array de mon message.json vide. celui est comme un conditionel ternaire
+        }                                                                     // valeur true fait en sorte que ca lis le fichier et le code en tableay PHP
 
         // Passer les messages à la vue
         return view('message', ['messages' => $messages]);

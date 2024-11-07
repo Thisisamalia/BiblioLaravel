@@ -33,6 +33,7 @@ class Homepagecontroller extends Controller
         }
 
         // Filtrer les livres par titre ou auteur
+        //nous allons filtrer notre array books et nous allons comparer chaque valeur avec la valeur query et si !== false veut dire que le livre na pas ete trouve
         $filteredBooks = array_filter($books, function ($book) use ($query) {
             return stripos($book['titre'], $query) !== false || stripos($book['auteure'], $query) !== false;
         });
@@ -40,4 +41,7 @@ class Homepagecontroller extends Controller
         // Passer les résultats filtrés à la vue
         return view('homepage', ['books' => $filteredBooks]);
     }
+
+
+         
 }
